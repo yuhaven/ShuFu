@@ -144,15 +144,21 @@
 
 - 已安装 Git `2.54.0.windows.1` 和 GitHub CLI `2.95.0`；
 - GitHub CLI 已通过系统 keyring 登录账号 `yuhaven`；日志不保存或显示认证 Token；
-- `D:\bookPro` 已初始化为 Git 仓库，当前分支为 `main`，尚无提交；
+- `D:\bookPro` 已初始化为 Git 仓库，当前分支为 `main`；
 - 本地提交身份为 `yuhaven` / `117079932+yuhaven@users.noreply.github.com`；
 - 公开仓库 [yuhaven/ShuFu](https://github.com/yuhaven/ShuFu) 已创建；
 - `origin` 已配置为 `https://github.com/yuhaven/ShuFu.git`，fetch/push 地址一致；
-- 最终暂存候选为 117 个文件；初始提交和首次 push 尚待主智能体执行。
+- 根提交 `0964a9527301f9b2c0556216fb689afe32822f60`（短哈希 `0964a95`，
+  message：`release ShuFu v0.4 development preview`）已从 `main` 推送；
+- 提交作者为 `yuhaven <117079932+yuhaven@users.noreply.github.com>`；
+- 首次提交包含 118 个文件、11,193 行新增；`main` 已跟踪 `origin/main`；
+- 首次 push 完成后的复核点工作树干净；
+- GitHub 默认分支为 `main`、visibility 为 `PUBLIC`，Issues 和 Discussions 已启用；
+- topics 为 `agent`、`ai`、`android`、`edge-ai`、`esp32`、`llm`、`python`。
 
-Git、GitHub CLI、仓库目标、提交身份、认证和 remote 已不再构成阻塞。本阶段只
-更新发布日志，不代替主智能体创建初始提交或推送。详细发布门槛见
-`docs/release-process.md`。
+这是一个新建空仓库的根提交，没有既有 base 可供比较，因此没有创建缺乏有效
+diff 的草稿 PR，也没有伪造 PR 记录。Git、认证、公开仓库、根提交和首次 push
+均已完成；详细发布门槛见 `docs/release-process.md`。
 
 ### 2026-06-21：GitHub 发布前安全预检
 
@@ -173,8 +179,17 @@ Git 初始化、提交、认证或网络上传。
 `.gitignore` 规则补强为 `android/**/.cxx/`，并只从 Git 索引移除该目录；本地
 构建缓存未被删除。重新审查后 `.cxx` 暂存文件数为 0，最终候选仍为 117 个文件。
 
-当前 Git/GitHub 与公开远端已就绪，但本次安全预检不创建提交或执行 push；首次
-提交与推送仍由主智能体在最终审查后执行。
+安全预检阶段只审查候选内容，没有在检查过程中创建提交或执行 push；通过以下
+最终门槛后，主智能体已完成根提交和首次推送。
+
+提交前最终门槛记录：
+
+- 全量 Python 回归 54/54 通过，耗时 8.944 秒；
+- credential 常见格式模式扫描无匹配；
+- nested build cache 暂存数为 0。
+
+以上门槛通过后，根提交和首次 push 已按本节记录完成。安全扫描结果只证明所列
+模式和文件范围未命中，不应被解释为对所有秘密类型的形式化证明。
 
 ## 8. 发布日志收尾结论
 
@@ -182,4 +197,4 @@ Git 初始化、提交、认证或网络上传。
 - 产品、设计、协议、测试报告和机器可读验证 JSON 均已存在并交叉核对。
 - v0.1 兼容仍是强制门槛；v0.3/v0.4 的新增能力没有替代旧端点或旧 Schema。
 - ESP-IDF/ESP32 真机、HTTP Agent、真实 LLM、Android Agent UI 真机均保持“未覆盖/未交付”。
-- GitHub 发布基础设施和公开 `origin` 已就绪；初始提交与首次 push 尚待完成，不以等待推送阻塞本地开发预览结论。
+- GitHub 公开仓库、根提交和首次 push 已完成，`main` 正跟踪 `origin/main`；作为新空仓库的根提交没有伪造无意义 PR。
