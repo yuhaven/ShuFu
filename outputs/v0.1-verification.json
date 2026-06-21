@@ -1,0 +1,39 @@
+{
+  "compatibility_baseline": "0.1",
+  "tested_implementation": "0.2.0",
+  "verified_at": "2026-06-21",
+  "environment": {
+    "os": "Microsoft Windows NT 10.0.26200.0 x64",
+    "python": "3.12.13"
+  },
+  "dedicated_compatibility_suite": {
+    "tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 2.208
+  },
+  "full_python_regression": {
+    "tests": 19,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 5.288
+  },
+  "cli_smoke": {
+    "run": "passed",
+    "save_artifact": "passed",
+    "memory_export": "passed",
+    "memory_import": "passed",
+    "imported_objects": {
+      "sessions": 1,
+      "messages": 2,
+      "artifacts": 1
+    }
+  },
+  "not_tested": [
+    "Linux host execution",
+    "real GGUF model inference",
+    "external OpenAI-compatible provider"
+  ]
+}

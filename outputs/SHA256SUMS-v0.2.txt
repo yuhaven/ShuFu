@@ -1,0 +1,2 @@
+91b861fec9cf3dbeb1dbb2986778c9f84d85fe8744e45ab8c33b4991a8d73129  ShuFu-v0.2-android-arm64.apk
+156644dccfbd0ba5b45469223bfed9f8ab8445e8d6a00f2c0c7c010dba6f052c  ShuFu-v0.2-sdk-arm64.aar

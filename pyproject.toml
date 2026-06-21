@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "shufu-ai"
+version = "0.4.0"
+description = "A minimal open-source model runtime, memory relay and invocation layer for Windows, Linux, Android and ESP32."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "ShuFu Community" }]
+keywords = ["llm", "edge-ai", "agent", "esp32", "android"]
+
+[project.optional-dependencies]
+llama = ["llama-cpp-python>=0.3"]
+dev = []
+
+[project.scripts]
+shufu = "shufu.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

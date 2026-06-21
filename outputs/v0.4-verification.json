@@ -1,0 +1,39 @@
+{
+  "version": "0.4.0",
+  "verified_at": "2026-06-21",
+  "status": "local_agent_lite_development_preview",
+  "python": {
+    "v0_4_tests": 23,
+    "v0_4_failures": 0,
+    "integrated_tests": 54,
+    "integrated_failures": 0,
+    "compileall": "passed"
+  },
+  "compatibility": {
+    "v0_1_tests": 4,
+    "v0_3_tests": 12,
+    "android_gradle_build_and_lint": "passed",
+    "android_tasks": 137
+  },
+  "security": {
+    "strict_boolean_approval": "passed",
+    "canonical_argument_copy": "passed",
+    "side_effect_terminal_consistency": "passed",
+    "base_exception_terminal_audit": "passed",
+    "immutable_redacted_audit": "passed",
+    "verified_summary_sources": "passed",
+    "bounded_summary_context": "passed"
+  },
+  "integration": {
+    "cli": "passed",
+    "capabilities_latest_version": "0.4",
+    "http_agent_transport": false,
+    "autonomous_background_agent": false
+  },
+  "limitations": [
+    "No remote Agent HTTP transport",
+    "No real LLM planner conformance matrix",
+    "No Android approval UI end-to-end test",
+    "No ESP32 Agent or GPIO hardware end-to-end test"
+  ]
+}

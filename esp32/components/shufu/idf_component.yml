@@ -1,0 +1,5 @@
+version: "0.3.0"
+description: "Minimal ShuFu Node client and bounded firmware tool registry for ESP-IDF"
+license: "Apache-2.0"
+dependencies:
+  idf: ">=5.1"

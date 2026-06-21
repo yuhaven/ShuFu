@@ -1,0 +1,80 @@
+name: 缺陷报告
+description: 报告 ShuFu 在 Windows、Linux、Android 或 ESP32 上的可复现问题
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢帮助 ShuFu 变得更可靠。请勿粘贴 API Key、Bearer Token、签名文件或真实用户记忆。
+  - type: input
+    id: version
+    attributes:
+      label: ShuFu 版本或提交
+      description: 例如 v0.2、v0.3-preview 或完整 commit SHA。
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 平台
+      options:
+        - Windows
+        - Linux
+        - Android
+        - ESP32
+        - 跨平台/协议
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: 环境
+      description: OS、设备型号/芯片、内存、Python/JDK/Android/ESP-IDF 版本、模型格式和运行时；不要包含密钥。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: 复现步骤
+      placeholder: |
+        1. 执行……
+        2. 调用……
+        3. 观察……
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期行为
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际行为与日志
+      description: 请先移除 Token、IP、个人路径、会话内容和其他敏感数据。
+    validations:
+      required: true
+  - type: dropdown
+    id: compatibility
+    attributes:
+      label: 是否涉及兼容性
+      options:
+        - 不确定
+        - v0.1 HTTP 或 Schema 1
+        - v0.2 capabilities 或 Schema 2
+        - Android SDK/Node 互操作
+        - ESP32/Node 互操作
+        - 不涉及
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 提交确认
+      options:
+        - label: 我已搜索重复 Issue，并确认报告中没有凭据或真实用户数据。
+          required: true
+

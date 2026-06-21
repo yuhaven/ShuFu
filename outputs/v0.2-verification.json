@@ -1,0 +1,80 @@
+{
+  "version": "0.2.0",
+  "verified_at": "2026-06-21",
+  "environment": {
+    "os": "Microsoft Windows NT 10.0.26200.0 x64",
+    "python": "3.12.13",
+    "jdk": "Eclipse Temurin 17.0.19+10",
+    "gradle": "8.10.2",
+    "android_sdk": 35,
+    "android_build_tools": "35.0.0",
+    "android_ndk": "27.2.12479018"
+  },
+  "python": {
+    "tests": 19,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "v0_1_compatibility_tests": 4,
+    "compileall": "passed",
+    "cli_smoke": "passed"
+  },
+  "android": {
+    "jvm_tests": 4,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "cross_language_python_node_test": true,
+    "debug_apk_build": "passed",
+    "debug_aar_build": "passed",
+    "release_lint": {
+      "status": "passed",
+      "errors": 0,
+      "warnings": 4
+    },
+    "abi": [
+      "arm64-v8a"
+    ],
+    "llama_cpp": "b9722",
+    "jni_exports": 4,
+    "physical_device_tested": false,
+    "real_gguf_inference_tested": false
+  },
+  "workspace_builds": {
+    "android/app/build/outputs/apk/debug/app-debug.apk": {
+      "bytes": 29090312,
+      "sha256": "168ba695f7c16142aa697bceccedcfd547c25329241c1a4178d1353361eb30da",
+      "signature": "APK Signature Scheme v2, Android Debug certificate"
+    },
+    "android/shufu-sdk/build/outputs/aar/shufu-sdk-debug.aar": {
+      "bytes": 2058661,
+      "sha256": "8ae2e05a018daf40903007418e4e5f0270aba56e3d23929d9d1eeeb4e82da1b3"
+    }
+  },
+  "release_artifacts": {
+    "ShuFu-v0.2-android-arm64.apk": {
+      "sha256": "91b861fec9cf3dbeb1dbb2986778c9f84d85fe8744e45ab8c33b4991a8d73129",
+      "checksum_manifest_match": true,
+      "signature": "APK Signature Scheme v2, Android Debug certificate",
+      "abi": [
+        "arm64-v8a"
+      ]
+    },
+    "ShuFu-v0.2-sdk-arm64.aar": {
+      "sha256": "156644dccfbd0ba5b45469223bfed9f8ab8445e8d6a00f2c0c7c010dba6f052c",
+      "checksum_manifest_match": true,
+      "abi": [
+        "arm64-v8a"
+      ]
+    }
+  },
+  "release_gate": {
+    "open_source_technical_preview": "passed",
+    "stable_android_release": "conditional",
+    "remaining_requirements": [
+      "physical Android device installation and UI test",
+      "real GGUF inference, memory, and performance test",
+      "replace Android Debug signing key with a release key"
+    ]
+  }
+}

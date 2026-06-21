@@ -1,0 +1,38 @@
+{
+  "version": "0.3.0",
+  "verified_at": "2026-06-21",
+  "status": "protocol_and_esp32_sdk_development_preview",
+  "python": {
+    "v0_3_tests": 12,
+    "v0_3_failures": 0,
+    "v0_1_compatibility_tests": 4,
+    "integrated_tests": 54,
+    "integrated_failures": 0
+  },
+  "esp32": {
+    "strict_c_syntax": "passed",
+    "compiler": "Android NDK r27c Clang, aarch64-linux-android21",
+    "flags": [
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-fsyntax-only"
+    ],
+    "esp_idf_full_build": false,
+    "physical_board_tested": false
+  },
+  "features": {
+    "ndjson_streaming": "passed",
+    "schema_3_inline_chunks_external": "passed",
+    "http_range": "passed",
+    "dual_cursor_exchange": "passed",
+    "fixed_buffer_esp32_parser": "static_verification_passed",
+    "per_call_side_effect_allowlist": "static_verification_passed"
+  },
+  "limitations": [
+    "Python runtime chunks completed generation; it is not token-first-byte streaming",
+    "ESP-IDF 5.1+ full component build was not run",
+    "No ESP32 or ESP32-S3 physical board was tested"
+  ]
+}
